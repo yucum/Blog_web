@@ -1,0 +1,250 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    color: rgb(9, 0, 141);
+}
+
+.navbar {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Color de fondo para la parte central */
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: rgb(9, 0, 141);
+    text-decoration: none;
+}
+
+main {
+    padding: 120px 0 20px; /* Espacio para evitar que el contenido se superponga con la barra de navegación */
+}
+
+.contenido {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenido h2, .contenido h3 {
+    color: #3f51b5; /* Cambio de color a azul */
+}
+
+.contenido-sub {
+    border: 2px solid #3f51b5; /* Cambio de color a azul */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: none; /* Ocultar la barra lateral por defecto */
+}
+
+.scroll-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-btn button {
+    border: none;
+    background-color: #3f51b5;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.scroll-btn button:hover {
+    background-color: #303f9f;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .contenido {
+        padding: 10px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    main {
+        padding: 270px 0 20px; /* Igual que para escritorio pero mas bajo */
+    }
+}
+
+/* Estilos para tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .navbar .container {
+        justify-content: center;
+        align-items: center; /* Centra los elementos verticalmente */
+    }
+
+    nav ul {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+
+    .contenido-sub {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .sidebar {
+        display: block;
+    }
+
+    main {
+        padding: 120px 0 20px; /* Espacio para evitar que el contenido se superponga con la barra de navegación */
+    }
+}
+
+/* Estilos para escritorio */
+@media only screen and (min-width: 1025px) {
+    .navbar .container {
+        justify-content: space-between;
+    }
+
+    nav ul {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .contenido-sub {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sidebar {
+        display: block;
+    }
+}
+
+/* Estilos para el modo claro */
+body.light-mode #toggle-light-mode img {
+    display: block; /* Muestra la imagen del modo claro */
+}
+
+/* Estilos para el botón de modo claro */
+#toggle-light-mode img {
+    width: 80px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Autoajusta la altura para mantener la proporción */
+}
+
+#toggle-light-mode {
+    cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es interactivo */
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#toggle-dark-mode {
+    cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es interactivo */
+}
+
+#toggle-dark-mode img {
+    width: 60px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+}
+
+body.dark-mode header {
+    background-color: transparent;
+}
+
+body.dark-mode .navbar .container {
+    background-color: #1e1e1e; /* Fondo en modo oscuro */
+}
+
+body.dark-mode nav ul li a {
+    color: #ffffff;
+}
+
+body.dark-mode .contenido {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .contenido h2, 
+body.dark-mode .contenido h3 {
+    color: #bb86fc; /* Color para títulos en modo oscuro */
+}
+
+body.dark-mode .contenido-sub {
+    border-color: #bb86fc; /* Cambio de color a borde en modo oscuro */
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .scroll-btn button {
+    background-color: #1e1e1e;
+}
