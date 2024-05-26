@@ -28,7 +28,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff; /* Color de fondo para la parte central */
+    background-color: #ffffff;
     padding: 10px 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -51,7 +51,7 @@ nav ul li a {
 }
 
 main {
-    padding: 120px 0 20px; /* Espacio para evitar que el contenido se superponga con la barra de navegación */
+    padding: 120px 0 20px;
 }
 
 .contenido {
@@ -62,11 +62,11 @@ main {
 }
 
 .contenido h2, .contenido h3 {
-    color: #3f51b5; /* Cambio de color a azul */
+    color: #3f51b5;
 }
 
 .contenido-sub {
-    border: 2px solid #3f51b5; /* Cambio de color a azul */
+    border: 2px solid #3f51b5;
     padding: 10px;
     margin-bottom: 20px;
 }
@@ -84,7 +84,7 @@ footer {
     right: 20px;
     transform: translateY(-50%);
     z-index: 999;
-    display: none; /* Ocultar la barra lateral por defecto */
+    display: none;
 }
 
 .scroll-btn {
@@ -105,6 +105,12 @@ footer {
 
 .scroll-btn button:hover {
     background-color: #303f9f;
+}
+
+/* Hacer que las imágenes sean responsivas */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Estilos para dispositivos móviles */
@@ -133,7 +139,7 @@ footer {
     }
 
     main {
-        padding: 285px 0 20px; /* Igual que para escritorio pero mas bajo */
+        padding: 285px 0 20px;
     }
 }
 
@@ -141,7 +147,7 @@ footer {
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
     .navbar .container {
         justify-content: center;
-        align-items: center; /* Centra los elementos verticalmente */
+        align-items: center;
     }
 
     nav ul {
@@ -160,7 +166,7 @@ footer {
     }
 
     main {
-        padding: 120px 0 20px; /* Espacio para evitar que el contenido se superponga con la barra de navegación */
+        padding: 120px 0 20px;
     }
 }
 
@@ -187,17 +193,17 @@ footer {
 
 /* Estilos para el modo claro */
 body.light-mode #toggle-light-mode img {
-    display: block; /* Muestra la imagen del modo claro */
+    display: block;
 }
 
 /* Estilos para el botón de modo claro */
 #toggle-light-mode img {
-    width: 80px; /* Ajusta el ancho de la imagen */
-    height: auto; /* Autoajusta la altura para mantener la proporción */
+    width: 80px;
+    height: auto;
 }
 
 #toggle-light-mode {
-    cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es interactivo */
+    cursor: pointer;
 }
 
 /* Modo Oscuro */
@@ -207,12 +213,12 @@ body.dark-mode {
 }
 
 #toggle-dark-mode {
-    cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es interactivo */
+    cursor: pointer;
 }
 
 #toggle-dark-mode img {
-    width: 60px; /* Ajusta el ancho de la imagen */
-    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    width: 60px;
+    height: auto;
 }
 
 body.dark-mode header {
@@ -220,7 +226,7 @@ body.dark-mode header {
 }
 
 body.dark-mode .navbar .container {
-    background-color: #1e1e1e; /* Fondo en modo oscuro */
+    background-color: #1e1e1e;
 }
 
 body.dark-mode nav ul li a {
@@ -234,11 +240,11 @@ body.dark-mode .contenido {
 
 body.dark-mode .contenido h2, 
 body.dark-mode .contenido h3 {
-    color: #bb86fc; /* Color para títulos en modo oscuro */
+    color: #bb86fc;
 }
 
 body.dark-mode .contenido-sub {
-    border-color: #bb86fc; /* Cambio de color a borde en modo oscuro */
+    border-color: #bb86fc;
 }
 
 body.dark-mode footer {
